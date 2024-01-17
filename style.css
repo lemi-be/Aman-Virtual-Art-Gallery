@@ -1,0 +1,248 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fafafa;
+    color: #333;
+    background-image: url(/resource/bg.jpg);
+    background-size: contain;
+    background-blend-mode: overlay;
+    background-color: #ddddddd8;
+}
+
+header {
+    background: #1a1a1a;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: min-content;
+    object-fit: contain;
+        
+}
+
+.gallery .art-piece {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 0;
+    width: calc(30.333% - 20px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.774);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+.gallery .art-piece:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+
+}
+
+.gallery .art-piece:hover img {
+    transform: scale(1.1);
+}
+
+.info {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    height: max-content;
+
+}
+
+.art-piece:hover .info {
+    transform: translateY(0);
+}
+
+.title, .artist {
+    margin: 2px 0;
+    font-size: 15px;
+    width: calc(100% - 53px);
+    
+}
+.artist {
+    text-decoration: underline;
+    font-weight: 600;
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #1a1a1a;
+    color: #f1f1f1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+header {
+    background: #1a1a1a;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+.header-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-middle input[type="text"] {
+    padding: 8px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #ddd;
+    border-right: none; 
+    border-radius: 20px 0 0 20px;
+}
+
+.header-middle button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-left: none; 
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0; 
+}
+.header-middle button:hover {
+    background-color: #e1e1e1;
+}
+
+.header-right {
+    display: flex;
+}
+
+.header-right a {
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.header-right a:hover {
+    color: #ddd;
+    text-decoration: underline 3px;
+}
+address a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 300;
+}
+address a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.gotogallery {
+    float: right;
+    margin: 20px 0;
+    margin-right: 100px;
+    border: none;
+    background-color: #1a1a1a;
+    color: #ddd;
+    padding: 15px 35px;
+    border-radius: 3px;
+}
+.gotogallery:hover {
+    background-color: #1a1a1af1;
+    text-decoration: underline 3px;
+}
+.gotogallery a {
+    text-decoration: none;
+    color: inherit;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.aboutText {
+    max-width: 70vw;
+}
+address .bottom-space {
+    font-size: 20px;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 1rem;
+    }
+
+    .header-middle {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .header-middle input[type="text"] {
+        width: 90%;
+    }
+    .gallery .art-piece {
+        width: calc(50% - 20px);
+    }
+    .gotogallery {
+        margin-right: unset;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery .art-piece {
+        width: 100%;
+    }
+    .gotogallery {
+        margin-right: unset;
+    }
+}
+
+
+
+
+
+
